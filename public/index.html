@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Vet Clinic Consult</title>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">Vet Clinic Consult</a>
+    </nav>
+
+    <!-- App wrapper -->
+    <div id="main_app" class="container"></div>
+
+    <!-- Template to pag 1 index -->
+    <script id="index_template" type="text/template">
+        <h2 for="search_vet">Search a Vet Clinic</h2>
+        <div class="search-vet-content">
+            <input class="form-control" aria-label="Search a Vet by name" placeholder="Search by name" type="search" id="search_vet">
+        </div>
+        <div class="card shadow-sm">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Specialist</th>
+                    </tr>
+                </thead>
+                <tbody id="vet-list" class="vet-list"></tbody>
+            </table>
+        </div>
+
+     </script>
+
+    <!-- Template to show single Vet used on Pag 1 index -->
+    <script id="vetTemplate" type="text/template">
+        <td><a href="#vet-details/<%= id %>" ><%= name %></a></td>
+        <td><%= specialist %></td>
+    </script>
+    
+    <!-- Template to pag 2 Vet Details -->
+    <script id="vet_detail_template" type="text/template">
+        <a href="#" >Back to Search</a>
+        <h2 for="search_vet">Vet Clinic Details</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="vet-img-basic-info content card shadow-sm">
+                    <div class="vet-image text-center">
+                        <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+                    </div>
+                    <div class="vet-info">
+                        <dl class="basic-info-list">
+                            <dt class="text-muted">Name</dt> 
+                            <dd><%= name %></dd>
+                            <dt class="text-muted">Specialty</dt> 
+                            <dd><%= specialist %></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="vet-more-info content card shadow-sm h-md-250">
+                    <h4>Description</h4>
+                    <%= description %>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script src="app.js"></script>
+</body>
+</html>
