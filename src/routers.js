@@ -1,4 +1,3 @@
-// var app = app || {};
 var Backbone = require('backbone')
 var IndexView = require('./views/indexView')
 var VetDetail = require('./views/vetDetail')

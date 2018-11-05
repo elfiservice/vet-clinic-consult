@@ -35,7 +35,7 @@ const IndexView = Backbone.View.extend({
     },
 
     filterBySearch: function() {
-        this.vetsView.vetList.reset(this.vetsListInitial, {silent: true});  //reset to Inital Data before filter
+        this.vetsView.vetList.reset(this.vetsListInitial);  //reset to Inital Data before filter
         var filterString = this.searchFilterString;
         var filtered = _.filter(this.vetsView.vetList.models, function(item) {
             return item.get('name').toLowerCase()
