@@ -18,19 +18,22 @@
 
     <!-- Template to pag 1 index -->
     <script id="index_template" type="text/template">
+        <h2 for="search_vet">Search a Vet Clinic</h2>
         <div class="search-vet-content">
-            <label for="search_vet">Search a Vet</label>
-            <input class="form-control" type="search" id="search_vet">
+            <input class="form-control" aria-label="Search a Vet by name" placeholder="Search by name" type="search" id="search_vet">
         </div>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Specialist</th>
-                </tr>
-            </thead>
-            <tbody id="vet-list" class="vet-list"></tbody>
-        </table>
+        <div class="card shadow-sm">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Specialist</th>
+                    </tr>
+                </thead>
+                <tbody id="vet-list" class="vet-list"></tbody>
+            </table>
+        </div>
+
      </script>
 
     <!-- Template to show single Vet used on Pag 1 index -->
@@ -38,12 +41,33 @@
         <td><a href="#vet-details/1" ><%= name %></a></td>
         <td><%= specialist %></td>
     </script>
+
+
     
     <!-- Template to pag 2 Vet Details -->
     <script id="vet_detail_template" type="text/template">
         <a href="#" >Voltar</a>
+        <h2 for="search_vet">Vet Clinic Details</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card shadow-sm">
+                    <div class="vet-image">
+                        <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+                    </div>
+                    <div class="vet-info">
+                        <ul class="basic-info-list"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="vet-more-info card shadow-sm h-md-250">
+                    infos
+                </div>
+            </div>
+        </div>
 
     </script>
+
 
 
     <script src="bower_components/jquery/dist/jquery.js"></script>

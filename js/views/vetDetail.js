@@ -15,7 +15,7 @@ app.VetDetail = Backbone.View.extend({
     render: function() {
         console.log(this.vetModel.get('name'));
         
-        this.$el.html( this.template() )
+        this.$el.html( this.template(this.vetModel) )
         return this;
     },
   });
