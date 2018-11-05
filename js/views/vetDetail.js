@@ -5,7 +5,9 @@ app.VetDetail = Backbone.View.extend({
     template: _.template( $('#vet_detail_template').html() ),
   
     initialize: function() {
-        this.render();
+        console.log(this.model);
+        
+         this.render();
     },
     render: function() {
         this.$el.html( this.template() )

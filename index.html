@@ -14,13 +14,13 @@
     </nav>
 
     <!-- App wrapper -->
-    <div id="main_app" class="jumbotron jumbotron-fluid"></div>
+    <div id="main_app" class="container"></div>
 
     <!-- Template to pag 1 index -->
     <script id="index_template" type="text/template">
         <div class="search-vet-content">
             <label for="search_vet">Search a Vet</label>
-            <input type="search" id="search_vet">
+            <input class="form-control" type="search" id="search_vet">
         </div>
         <table class="table">
             <thead>
@@ -35,15 +35,14 @@
 
     <!-- Template to show single Vet used on Pag 1 index -->
     <script id="vetTemplate" type="text/template">
-        <td><%= name %></td>
+        <td><a href="#vet-details/1" ><%= name %></a></td>
         <td><%= specialist %></td>
     </script>
     
     <!-- Template to pag 2 Vet Details -->
     <script id="vet_detail_template" type="text/template">
-        <div class="container">
-            segunda view
-        </div>
+        <a href="#" >Voltar</a>
+
     </script>
 
 
