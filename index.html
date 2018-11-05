@@ -39,15 +39,13 @@
 
     <!-- Template to show single Vet used on Pag 1 index -->
     <script id="vetTemplate" type="text/template">
-        <td><a href="#vet-details/1" ><%= name %></a></td>
+        <td><a href="#vet-details/<%= id %>" ><%= name %></a></td>
         <td><%= specialist %></td>
     </script>
-
-
     
     <!-- Template to pag 2 Vet Details -->
     <script id="vet_detail_template" type="text/template">
-        <a href="#" >Voltar</a>
+        <a href="#" >Back to Search</a>
         <h2 for="search_vet">Vet Clinic Details</h2>
         <div class="row">
             <div class="col-md-4">
@@ -57,30 +55,21 @@
                     </div>
                     <div class="vet-info">
                         <dl class="basic-info-list">
-                            <!-- <li><span class="text-muted">Nome</span> <%= name %></li>
-                            <li><span class="text-muted">Especialidade</span> <%= specialist %></li> -->
-                            <dt class="text-muted">Nome</dt> 
+                            <dt class="text-muted">Name</dt> 
                             <dd><%= name %></dd>
-                            <dt class="text-muted">Especialidade</dt> 
+                            <dt class="text-muted">Specialty</dt> 
                             <dd><%= specialist %></dd>
-
                         </dl>
                     </div>
                 </div>
             </div>
             <div class="col-md-8">
                 <div class="vet-more-info content card shadow-sm h-md-250">
-                    <h3>Descrição</h3>
+                    <h4>Description</h4>
                     <%= description %>
                 </div>
             </div>
         </div>
-
-    </script>
-
-    <!-- todo: CRIAR Template to List of Basic Infos in pag 2 Vet Details -->
-    <script id="vet_detail_template" type="text/template">
-        
     </script>
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
