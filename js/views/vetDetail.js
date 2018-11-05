@@ -10,12 +10,9 @@ app.VetDetail = Backbone.View.extend({
 
         this.vetModel.fetch()
         .then( res => this.render() )
-
     },
     render: function() {
-        console.log(this.vetModel.get('name'));
-        
-        this.$el.html( this.template(this.vetModel) )
+        this.$el.html( this.template(this.vetModel.attributes) )
         return this;
     },
   });

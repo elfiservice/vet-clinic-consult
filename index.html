@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Vet Clinic Consult</title>
 </head>
 <body>
@@ -50,25 +51,37 @@
         <h2 for="search_vet">Vet Clinic Details</h2>
         <div class="row">
             <div class="col-md-4">
-                <div class="card shadow-sm">
-                    <div class="vet-image">
+                <div class="vet-img-basic-info content card shadow-sm">
+                    <div class="vet-image text-center">
                         <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
                     </div>
                     <div class="vet-info">
-                        <ul class="basic-info-list"></ul>
+                        <dl class="basic-info-list">
+                            <!-- <li><span class="text-muted">Nome</span> <%= name %></li>
+                            <li><span class="text-muted">Especialidade</span> <%= specialist %></li> -->
+                            <dt class="text-muted">Nome</dt> 
+                            <dd><%= name %></dd>
+                            <dt class="text-muted">Especialidade</dt> 
+                            <dd><%= specialist %></dd>
+
+                        </dl>
                     </div>
                 </div>
             </div>
             <div class="col-md-8">
-                <div class="vet-more-info card shadow-sm h-md-250">
-                    infos
+                <div class="vet-more-info content card shadow-sm h-md-250">
+                    <h3>Descrição</h3>
+                    <%= description %>
                 </div>
             </div>
         </div>
 
     </script>
 
-
+    <!-- todo: CRIAR Template to List of Basic Infos in pag 2 Vet Details -->
+    <script id="vet_detail_template" type="text/template">
+        
+    </script>
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
